@@ -1,5 +1,39 @@
-.page__header {
+.header {
+  background-color: bisque;
   display: flex;
-  justify-content: space-evenly;
-  margin-bottom: 3rem;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+   @media(width > 768px){
+    flex-direction: row;
+  
+   }
+
+  &_title {
+    //color: $text-color;
+    @include text_functions ();
+    font-size: 25px;
+    &-sub {
+      text-decoration: underline;
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+  &_link {
+    @include text_functions ();
+    text-decoration: none;
+    @media(width > 768px){
+      &:hover {
+      color: $text_hover;
+     }
+    
+    }
+
+    
+  }
 }
